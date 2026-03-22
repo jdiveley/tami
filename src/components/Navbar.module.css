@@ -2,16 +2,15 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .nav {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 2rem;
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,39 +18,28 @@
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: 0.02em;
-}
-
-.logo:hover {
-  color: var(--primary);
-  transition: color 0.2s;
 }
 
 .links {
   list-style: none;
   display: flex;
-  gap: 2.5rem;
-  align-items: center;
+  gap: 2rem;
 }
 
 .links a {
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   color: var(--text-light);
   transition: color 0.2s;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
 }
 
 .links a:hover,
 .links a.active {
-  color: var(--text);
-  border-bottom-color: var(--primary);
+  color: var(--pink);
 }
 
 .hamburger {
@@ -66,43 +54,32 @@
 
 .hamburger span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background: var(--text);
   border-radius: 2px;
-  transition: all 0.2s;
 }
 
-@media (max-width: 640px) {
-  .hamburger {
-    display: flex;
-  }
+@media (max-width: 500px) {
+  .hamburger { display: flex; }
 
   .links {
     display: none;
     flex-direction: column;
     gap: 0;
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: 0;
     right: 0;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 0;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0.5rem 0;
   }
 
-  .links.open {
-    display: flex;
-  }
-
-  .links li {
-    width: 100%;
-    text-align: center;
-  }
+  .links.open { display: flex; }
 
   .links a {
     display: block;
-    padding: 0.75rem 2rem;
-    border-bottom: none;
+    padding: 0.65rem 2rem;
   }
 }
